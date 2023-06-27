@@ -1,0 +1,20 @@
+
+************************************
+sudo docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=123 -d mysql:8.0.33
+
+sudo docker ps -a
+
+sudo docker exec -it some-mysql bash
+
+mysql -u root -p
+
+show databases
+
+exit
+
+exit
+
+sudo docker run --name my-phpadmin -d --link some-mysql:db -p 8081:80 phpmyadmin/phpmyadmin
+sudo docker ps -a
+
+
